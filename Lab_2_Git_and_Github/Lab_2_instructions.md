@@ -129,3 +129,17 @@ Step 2: 4 is removed
 ```
 
 Answer is 3.
+
+
+## Exercise 2.5 (optional)
+
+Create or log into your GitHub account. Create a repository with some creative name (sudoku, pydoku, or python-sudoku are all fine possibilities). Make the repo private so your friends and foes don’t copy your work.
+
+I recommend that you configure [hiding your email](https://dev.to/bad-logic/git-keeping-your-email-safe-in-public-repositories-16cg#:~:text=Use%20github's%20Private%20Email%20Feature). You might need to configure ssh on your laptop and provide GitHub your ssh public key if you haven’t done this before.
+
+Push your local git repo to GitHub:
+
+```bash
+$ git remote add origin git@github.com:`<your username>`/`<repo name>`.git
+$ git push -u origin main
+```
