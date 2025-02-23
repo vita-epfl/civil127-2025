@@ -6,7 +6,7 @@ For a walkthough on the installation and setting up, please have a look at [here
 
 ## Exercise 2.1
 
-You will start by solving the first 15 levels (Introduction Sequence, Ramping Up, Moving Work Around, A Mixed Bag) of learngitbranching (click on the link to access the exercises).
+You will start by solving the first 15 levels (Introduction Sequence, Ramping Up, Moving Work Around, A Mixed Bag) of [learngitbranching](https://learngitbranching.js.org/).
 It might take you some time to complete them, but it will teach you the commands you need to use git properly.
 
 You can (optional) also solve all the remaining 19 levels (Advanced Topics, Push & Pull -- Git Remotes!, To Origin And Beyond -- Advanced Git Remotes!).
