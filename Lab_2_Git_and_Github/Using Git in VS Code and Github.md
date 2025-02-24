@@ -25,7 +25,13 @@ Go to [https://git-scm.com/downloads](https://git-scm.com/downloads)
 - For Windows click on “Windows” and choose “64-bit Git for Windows Setup”
     
     Just use the default settings and click Next towards the end.
-    
+
+After installing git, run these in your Terminal (choose your own name and email, and you can use fake email and names for privacy)
+
+```bash
+git config --global user.name "My Name"
+git config --global user.email "my_name@example.com"
+```
 
 ### Register Github Account
 
@@ -43,33 +49,23 @@ Click on the Avatar button and Sign in (a browser page will pop up and guide you
 
 ![image.png](imgs/image%202.png)
 
-### Configuring git (optional)
+### Configuring SSH (optional)
 
-Configuring means telling git who is making changes to the managed codes. Nowadays if you login to Github and use VS Code interface, this part is usually not necessary. But you may want to use the command line someday.
-
-Run these in your Terminal (but use your own name and email)
-
-```bash
-git config --global user.name "My Name"
-git config --global user.email "my_name@example.com"
-```
-
-For SSH Verification, run the following in Terminal
+Nowadays if you login to Github and use VS Code interface, this part is usually not necessary. But you may want to use the command line someday.
 
 - What is SSH https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh
     
     Simply speaking it is a way to safely transfer data. The sender will use the public key to encrypt the message, and only the person with the corresponding private key will be able to decode the message. You can add public key to your Github account, then when you try to push a commit to the repository, Github will use the trusted public key to verify if the push comes from a computer with the corresponding private key (which is your computer).
     
-
+To start with, generate your SSH keys (you can follow [Github doc](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key))
 ```bash
-ssh-keygen -t rsa -b 4096 -C "my_name@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-Open a new terminal and run `cat ~/.ssh/id_rsa.pub`  
+Open a new terminal and run `cat ~/.ssh/id_ed25519.pub`.
+For windows users, run `type C:\Users\YOUR_USERNAME\.ssh\id_ed25519.pub`. Note that if you run windows CMD from start menu without Administrator mode, you can see the terminal is opened at `C:\Users\YOUR_USERNAME`. 
 
-in windows `type C:\Users\username\.ssh\id_rsa.pub`
-
-Copy everything printed (it should be a long string starting with `ssh-rsa` and ending with your email)
+Copy everything printed (it should be a long starting with `ssh-ed25519` and ending with your email). 
 
 Go to [https://github.com/settings/keys](https://github.com/settings/keys), and click “New SSH Key”, give it a name, paste the copied string, and add. 
 
