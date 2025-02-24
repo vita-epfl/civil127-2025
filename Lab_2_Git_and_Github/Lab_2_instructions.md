@@ -1,6 +1,6 @@
 # EPFL CIVIL-127, Lab 2
 
-The objective of this exercise session is to learn how to use git with VS Code and Github.
+The objective of this exercise session is to learn how to use git.
 
 For a walkthough on the installation and setting up, please have a look at [here](https://weijiang1998.notion.site/Using-Git-in-VS-Code-and-Github-19f44b73854b809fa008c4b593054741?pvs=4) or the file "Using Git in VS Code and Github.md"
 
@@ -27,21 +27,23 @@ $ cd sokoban  # Move to the created folder (change directory)
 $ git init  # This command will initialize a git repository in the current location
 ```
 
-We will now create a commit with your Sokoban code from lab 1 (exercise 1.5), assuming it is working.
-If you have not completed it, you can test these steps with any new file
+We will now create a commit with your Sokoban code from lab 1 (exercise 1.5). 
+If you have not completed it, you can test these steps with any new file or the solution files.
 
-(<lab1_code> should be replaced with the actual path to the file, you can also choose to move it manually if you prefer. “cp” is the command to copy files, the dot (“.”) is used to copy to the current repository. If you were to replace it with “another_folder/”, the file would be copied to “another_folder/”.)
+Assume your codes are written in the file `sokoban.py`.
+`<path_to_lab1_code>` (including `< >`) should be replaced with the actual path to the file, you can also choose to move it manually if you prefer. 
+The dot `.` means all files in this folder. `cp` is the command to copy files. 
 
 ```bash
-$ cp <lab1_code> .  
-$ git add .  # By doing this, you add all your files to the staging area.
+$ cp <path_to_lab1_code> .
+$ git add sokoban.py  # Add the file 'sokoban.py' to git stage 
 $ git commit -m "initial commit: data loader"  # Commits the changes with a message describing the commit.
 ```
 
 Now create a git branch to work on the next feature. Creating branches allows you to work on new features or fixes without affecting the main code.
 
 ```bash
-$ git switch -c ‘player-box-movement’ # “-c <name>” will create a new branch <name>
+$ git switch -c player-box-movement # “-c <name>” will create a new branch <name>
 ```
 
 Implement player and box movement. Prompt the user to enter “w, a, s, d” (or other keys if you prefer) and move the player accordingly (W for up, A for left, S for down, D for right if you have a Swiss keyboard, in the same fashion you would have in video games).
@@ -54,7 +56,7 @@ Now commit your code.
 
 ```bash
 $ git add . # By doing this, you add all your files to the staging area.
-$ git commit -m ‘player and box movement implementation’ # commit with a meaningful message
+$ git commit -m 'player and box movement implementation' # commit with a meaningful message
 ```
 
 Your tree should now look something like:
