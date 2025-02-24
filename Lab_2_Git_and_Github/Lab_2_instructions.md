@@ -27,12 +27,12 @@ $ cd sokoban  # Move to the created folder (change directory)
 $ git init  # This command will initialize a git repository in the current location
 ```
 
-We will now create a commit with your Sokoban code from lab 1 (exercise 1.5). 
+We will now create a commit with your Sokoban code from lab 1 (exercise 1.5).
 If you have not completed it, you can test these steps with any new file or the solution files.
 
-Assume your codes are written in the file `sokoban.py`.
-`<path_to_lab1_code>` (including `< >`) should be replaced with the actual path to the file, you can also choose to move it manually if you prefer. 
-The dot `.` means all files in this folder. `cp` is the command to copy files. 
+Assume your code is written in the file `sokoban.py`.
+`<path_to_lab1_code>` (including `< >`) should be replaced with the actual path to the file, you can also choose to move it manually if you prefer.
+The dot `.` means all files in this folder. `cp` is the command to copy files. Alternatively, you may use your graphical file explorer to do this. 
 
 ```bash
 $ cp <path_to_lab1_code> .

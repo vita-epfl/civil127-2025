@@ -26,7 +26,7 @@ Go to [https://git-scm.com/downloads](https://git-scm.com/downloads)
     
     Just use the default settings and click Next towards the end.
 
-After installing git, run these in your Terminal (but use your own name and email)
+After installing git, run these in your Terminal (choose your own name and email, and you can use fake email and names for privacy)
 
 ```bash
 git config --global user.name "My Name"
@@ -57,15 +57,15 @@ Nowadays if you login to Github and use VS Code interface, this part is usually 
     
     Simply speaking it is a way to safely transfer data. The sender will use the public key to encrypt the message, and only the person with the corresponding private key will be able to decode the message. You can add public key to your Github account, then when you try to push a commit to the repository, Github will use the trusted public key to verify if the push comes from a computer with the corresponding private key (which is your computer).
     
-To start with, generate your SSH keys
+To start with, generate your SSH keys (you can follow [Github doc](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key))
 ```bash
-ssh-keygen -t rsa -b 4096 -C "my_name@example.com"
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-Open a new terminal and run `cat ~/.ssh/id_rsa.pub`.
-For windows users, run `type C:\Users\username\.ssh\id_rsa.pub`
+Open a new terminal and run `cat ~/.ssh/id_ed25519.pub`.
+For windows users, run `type C:\Users\YOUR_USERNAME\.ssh\id_ed25519.pub`. Note that if you run windows CMD from start menu without Administrator mode, you can see the terminal is opened at `C:\Users\YOUR_USERNAME`. 
 
-Copy everything printed (it should be a long string starting with `ssh-rsa` and ending with your email)
+Copy everything printed (it should be a long starting with `ssh-ed25519` and ending with your email). 
 
 Go to [https://github.com/settings/keys](https://github.com/settings/keys), and click “New SSH Key”, give it a name, paste the copied string, and add. 
 
