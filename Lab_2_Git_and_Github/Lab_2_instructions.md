@@ -9,12 +9,12 @@ For a walkthough on the installation and setting up, please have a look at [here
 You will start by solving the first 15 levels (Introduction Sequence, Ramping Up, Moving Work Around, A Mixed Bag) of [learngitbranching](https://learngitbranching.js.org/).
 It might take you some time to complete them, but it will teach you the commands you need to use git properly.
 
-You can (optional) also solve all the remaining 19 levels (Advanced Topics, Push & Pull -- Git Remotes!, To Origin And Beyond -- Advanced Git Remotes!).
+You can (optionally) also solve all the remaining 19 levels (Advanced Topics, Push & Pull -- Git Remotes!, To Origin And Beyond -- Advanced Git Remotes!).
 
 For the rest of this exercise session, the commands are provided for MacOS/Linux terminal. The line starts with a “$” sign, it is not part of the command you should use, the comments after the # signs are not to be pasted in your terminal either.
 
 For Windows users, equivalent commands are provided as comments (e.g., those after a "#") or you can do equivalent things (usually coping files and changing folders) with the graphical user interface.
-Concretely, the linux commands used in this exercise are `mkdir` `cp` `cd` `ls`, and the equivalent commands in windows are `mkdir` `copy` `cd` `dir`.
+Concretely, the linux commands used in this exercise are `mkdir` `cp` `cd` `ls`, and the equivalent commands in Windows are `mkdir` `copy` `cd` `dir`.
 For a complete comparison, you can refer to https://www.geeksforgeeks.org/linux-vs-windows-commands.
 
 ## Exercise 2.2
@@ -70,7 +70,7 @@ Let’s merge your branch with the main.
 
 ```bash
 $ git switch main
-$ git merge --no-ff player-box-movement # “--no-ff” keeps the branch history explicit.
+$ git merge --no-ff --no-edit player-box-movement # “--no-ff” keeps the branch history explicit.
 $ git branch -d player-box-movement # Deletes the branch <player-box-movement>
 ```
 
@@ -93,8 +93,8 @@ Congrats! You’ve successfully initialized a Git repository, created and merged
 
 “SEND + MORE = MONEY” is a classic math puzzle. The goal is to find integer values between 0 and 9 for each letter. Two different letters must have different values. S and M can’t be 0.
 
-First, write a program to solve this puzzle without using any other Python libraries. You can start with a naive brute-force program that tries all possible combinations until it finds a solution..
-Then, write another solution using any Python library you desire.
+First, write a program to solve this puzzle without using any other Python libraries. You can start with a naive brute-force program that tries all possible combinations until it finds a solution.
+Then write another, simpler, solution using any Python library you desire.
 
 ## Exercise 2.4 (optional)
 
