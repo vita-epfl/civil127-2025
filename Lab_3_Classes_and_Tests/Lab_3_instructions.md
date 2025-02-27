@@ -6,7 +6,10 @@ automated testing.
 ## Exercise 3.1
 
 A stack is a last in, first out (LIFO) data structure. The data that gets pushed
-last gets popped first.
+last gets popped first. Stacks are commonly used to implement features such as
+undo in a word processor. They are also used when solving some search problems
+(depth first searches). Recursive functions (such as `rlc` in exercise 1.4) make
+use of an implicit stack: function arguments live on a stack.
 
 ```txt
 Example:
