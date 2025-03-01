@@ -1,6 +1,6 @@
 # Managing Python Environments with Conda
 
-If you have multiple python environments for different projects or courses, you can use Conda to manage and switch between them. It works similarly for This page will guide you through the installation and tell you how to switch environments and install packages. Online version [here](https://www.notion.so/Managing-Python-Environments-with-Conda-19f44b73854b80798282eee8fa6ea15f?pvs=21).
+If you have multiple python environments for different projects or courses, you can use Conda to manage and switch between them. It works similarly for Windows, Linux and MacOS. This page will guide you through the installation and tell you how to switch environments and install packages. Online version [here](https://www.notion.so/Managing-Python-Environments-with-Conda-19f44b73854b80798282eee8fa6ea15f?pvs=21).
 
 ### What is a command line interface (CLI) and how to get it?
 

@@ -1,6 +1,1 @@
-To run the game, open a terminal in the folder `sokoban` and run 
-
-```bash
-conda activate civil127
-python sokoban.py
-```
+To run the game, you can open the file `sokoban.py` and use the "Run and Debug" function of VS Code (press F5).
