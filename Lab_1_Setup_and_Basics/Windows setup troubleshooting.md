@@ -47,7 +47,7 @@ Note : This would have to be done at the start of every session
     
     If this opens a Python 3.12.9 REPL (cf. the image below) you have correctly created an alias for the path to your interpreter 
     
-    ![image.png](image.png)
+    ![image.png](imgs/win%20image.png)
     
     - This means that you do not have to paste the `& <C:\Path\To\Python312\python.exe>`  command every time you want to run from the 3.12.9 interpreter. You simply can use your newly created command to for example run a file, open a terminal in the file location and type : `python312 file.py`
 
@@ -77,7 +77,7 @@ Note : This would have to be done at the start of every session
     
     If this opens a Python 3.12.9 REPL (cf. the image below) you have correctly created an alias for the path to your interpreter 
     
-    ![image.png](image.png)
+    ![image.png](imgs/win%20image.png)
     
     - This means that you do not have to paste the `& <C:\Path\To\Python312\python.exe>`  command every time you want to run from the 3.12.9 interpreter. You simply can use your newly created command to for example run a file, open a terminal in the file location and type : `python312 file.py`
 
@@ -123,11 +123,11 @@ Note : this will work if you only have the 3.12.9 version of python installed on
     - ### Environment variables
         - to find environment variables on your computer search for it in your window menu’s search bar, on the `System Properties` window click on `Environment Variables` on the bottom right
             
-            ![image.png](image%201.png)
+            ![image.png](imgs/win%20image%201.png)
             
         - look for the `Path` variable either in your system or in your user variables
             
-            ![image.png](image%202.png)
+            ![image.png](imgs/win%20image%202.png)
             
         
         ---
@@ -147,6 +147,6 @@ Note : this will work if you only have the 3.12.9 version of python installed on
     
     If this opens a Python 3.12.9 REPL (cf. the image below) you have correctly created an alias for the path to your interpreter
     
-    ![image.png](image.png)
+    ![image.png](imgs/win%20image.png)
     
     - This means that you do not have to paste the `& <C:\\Path\\To\\Python312\\python.exe>` command every time you want to run from the 3.12.9 interpreter. You simply can use the normal python command to, for example, run a file, open a terminal in the file location and type : `python file.py`
