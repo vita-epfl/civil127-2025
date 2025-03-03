@@ -7,9 +7,9 @@ automated testing.
 
 A stack is a last in, first out (LIFO) data structure. The data that gets pushed
 last gets popped first. Stacks are commonly used to implement features such as
-undo in a word processor. They are also used when solving some search problems
-(depth first searches). Recursive functions (such as `rlc` in exercise 1.4) make
-use of an implicit stack: function arguments live on a stack.
+undo in a word processor. They can also be used when solving search problems
+(such as depth first searches). Recursive functions (such as `rlc` in exercise
+1.4) make use of an implicit stack since function arguments live on a stack.
 
 ```txt
 Example:
@@ -58,7 +58,7 @@ push(2):
  ---
 ```
 
-Implement a Stack class which works with numbers and gives you the maximum
+Implement a Stack class which works with integers and gives you the maximum
 and minimum values currently in the stack. Your class should have the following
 API:
 
@@ -96,8 +96,11 @@ benefits.
 ## Exercise 3.2
 
 Implement tests for your stack class. Did writing tests reveal any bugs in your
-code? Since everyone has the same API, you can exchange your tests with your
-peers. Did it help find bugs in your code?
+code? You can also exchange tests with your peers.
+
+Did your tests cover the following edge cases?
+- Poping when the stack is empty
+- Calling `max()` or `min()` when the stack is empty?
 
 ## Exercise 3.3
 
@@ -105,51 +108,15 @@ Note: We recommend using `git` to track your code changes. You may however
 skip using `git` for this and the remaining labs if you want to focus on the
 coding side of things. We understand that `git` has a learning curve.
 
-Create a git branch called "refactor":
+Refactor your Sokoban code from labs 1 and 2 and use classes. You should
+end up with at least a Model, a View, and a Controller class. You might
+have additional classes.
 
-```bash
-[sokoban]$ git switch -c refactor
-```
-
-We are going to refactor the Sokoban code from labs 1 and 2 to use a class.
-
-Start by refactoring the level loading code. Move it to a class called
-GameModel. A model is a class used for the internal representation
-of information. You can keep GameModel in the same file (e.g. sokoban.py) or
-put it in a new file (e.g. game_model.py).
-
-Make sure your game still works, then create a commit:
-
-```bash
-[sokoban]$ git add sokoban.py game_model.py
-[sokoban]$ git commit -m "Refactor level loading (exercise 3.3)"
-```
-
-Now move the player and box movement logic in the same GameModel class. The
-model is also responsible to enforce valid movements.
-
-Again, make sure your game still works and create a commit:
-
-```bash
-[sokoban]$ git add sokoban.py game_model.py
-[sokoban]$ git commit -m "Refactor player and box movement (exercise 3.3)"
-```
-
-You can now merge this branch into your main:
-
-```bash
-[sokoban]$ git switch main
-[sokoban]$ git merge --no-ff --no-edit refactor
-[sokoban]$ git branch -d refactor
-```
+If you are using `git` to track your code changes, your refactor should be
+split into small commits (somewhere between 3-5 commits). As you prepare
+each commit, make sure your game still works.
 
 ## Exercise 3.4
-
-Create a git branch named "tests":
-
-```bash
-[sokoban]$ git switch -c tests
-```
 
 Write unittests for your code. Your tests should check that:
 
@@ -161,28 +128,6 @@ Write unittests for your code. Your tests should check that:
 
 You can use the existing level data or create your own simpler level data for
 the purpose of writing tests.
-
-Create a commit and merge your tests:
-
-```bash
-[sokoban]$ git add game_model_tests.py
-[sokoban]$ git commit -m "Add tests (exercise 3.4)"
-[sokoban]$ git switch main
-[sokoban]$ git merge --no-ff --no-edit tests
-[sokoban]$ git branch -d tests
-```
-
-Your git tree should look something like:
-
-```txt
-Initial commit: data load
-player and box movement implementation
-Refactor level loading (exercise 3.3)
-Refactor player and box movement (exercise 3.3)
-Merge commit
-Add tests (exercise 3.4)
-Merge commit
-```
 
 ## Exercise 3.5 (optional)
 
