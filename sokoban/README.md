@@ -1,0 +1,1 @@
+To run the game, you can open the file `sokoban.py` and use the "Run and Debug" function of VS Code (press F5).
