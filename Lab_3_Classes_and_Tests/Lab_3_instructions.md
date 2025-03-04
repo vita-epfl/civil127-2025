@@ -120,7 +120,7 @@ each commit, make sure your game still works.
 
 Write unittests for your code. Your tests should check that:
 
-  - a player can move to an empty spave
+  - a player can move to an empty space
   - a player cannot move into a wall
   - a player can push a box if the box will occupy an empty space
   - a player cannot push a box if another box is blocking it
