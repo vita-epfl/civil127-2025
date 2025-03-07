@@ -13,4 +13,4 @@ Hello, moi c'est lisa.
 
 Hello, I am Paula.
 
-Hello, my name is Aline.
+Hello, I'm Aline
