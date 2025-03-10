@@ -17,3 +17,4 @@ For exercises related to the Sokoban game, the entry point is usually a file nam
 The script will load a game board from the `levels` folder (now placed in `solutions`), and the default path assumes that the codes will be run from the `solutions` folder.
 One can open the `solutions` folder in VS Code and use the "Run and Debug" function.
 Alternatively, one can also adjust the path in the codes.
+Besides, the tests can be run from `solutions/exercise_n_n/` folder using `python test_file.py`.
