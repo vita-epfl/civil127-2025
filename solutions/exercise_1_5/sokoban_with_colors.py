@@ -50,7 +50,7 @@ def print_board_color(board):
         print(colored_row + COLOR_RESET)  # Reset color at the end of each line
 
 
-def getPlayerPosition(board):
+def get_player_position(board):
     '''scan board for the player's position. Returns a tuple.'''
     for y, row in enumerate(board):
         for x, cell in enumerate(row):
@@ -58,12 +58,12 @@ def getPlayerPosition(board):
                 return (x, y)
 
 
-def isEmpty(board, x, y):
+def is_empty(board, x, y):
     '''checks if the given x, y position is empty (valid for the player or a box to move into)'''
     return board[y][x] in {SYMBOL_FLOOR, SYMBOL_GOAL}
 
 
-def isBox(board, x, y):
+def is_box(board, x, y):
     '''checks if the given x, y position is a box.'''
     return board[y][x] in {SYMBOL_BOX, SYMBOL_BOX_ON_GOAL}
 
@@ -74,6 +74,6 @@ path = os.path.join("levels", "level1.xsb")
 board = read_file(path)
 
 print_board_color(board)
-print("The player is now at position: ", getPlayerPosition(board))
-print("Position (1, 7) is a floor or a goal: ", isEmpty(board, 1, 7))
-print("Position (2, 5) is a box:", isBox(board, 2, 5))
+print("The player is now at position: ", get_player_position(board))
+print("Position (1, 7) is a floor or a goal: ", is_empty(board, 1, 7))
+print("Position (2, 5) is a box:", is_box(board, 2, 5))
