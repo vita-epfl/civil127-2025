@@ -1,7 +1,7 @@
 
 import unittest
 
-from sokoban_model import MoveResponse, SokobanModel
+from .sokoban_model import MoveResponse, SokobanModel
 
 SIMPLE_LEVEL = """######
 #-$-.#
@@ -36,5 +36,5 @@ class TestSokobanModel(unittest.TestCase):
         self.assertEqual(model.move(-1, 0), MoveResponse.VALID)
         self.assertEqual(model.move(-1, 0), MoveResponse.INVALID_BOX)
 
-
-unittest.main()
+if __name__ == "__main__":
+    unittest.main()
