@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666662 8.4666662"
+   version="1.1"
+   id="svg1025"
+   sodipodi:docname="player.svg"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1203"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     height="15.46489mm"
+     inkscape:zoom="11.709263"
+     inkscape:cx="19.172854"
+     inkscape:cy="19.130153"
+     inkscape:window-width="1296"
+     inkscape:window-height="800"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1025"
+     units="px" />
+  <defs
+     id="defs1022" />
+  <circle
+     style="fill:#ffff00;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path1399"
+     cx="4.2333331"
+     cy="4.2333331"
+     r="3.8364582" />
+  <ellipse
+     style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0865146;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path1399-9"
+     cx="3.1136324"
+     cy="2.5126681"
+     rx="0.5647257"
+     ry="0.79156685" />
+  <ellipse
+     style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.0865146;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path1399-9-9"
+     cx="5.5189443"
+     cy="2.5126681"
+     rx="0.5647257"
+     ry="0.79156685" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 2.028889,5.2171433 c 0,0 0.7453063,1.5527213 2.0495921,1.5527213 1.3042857,0 2.3394334,-1.5113154 2.3394334,-1.5113154"
+     id="path2932"
+     sodipodi:nodetypes="csc" />
+</svg>
