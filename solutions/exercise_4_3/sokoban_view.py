@@ -49,3 +49,12 @@ class SokobanView:
 
         # Tell pygame we are done drawing
         pygame.display.flip()
+
+    def winning_message(self):
+        font = pygame.font.Font(None, 36)
+        text = font.render("You Won!", True, (255, 215, 0))
+        textRect = text.get_rect()
+        textRect.center = self.screen.get_rect().center
+        self.screen.blit(text, textRect)
+        pygame.display.flip()
+        pygame.time.wait(3000)

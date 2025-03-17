@@ -46,7 +46,7 @@ class SokobanController:
                         self.view.print(self.model)
                     elif move_response == MoveResponse.DONE:
                         self.view.print(self.model)
-                        print("Success!")
+                        self.view.winning_message()
                         return
                     else:
                         print(move_response.value)
