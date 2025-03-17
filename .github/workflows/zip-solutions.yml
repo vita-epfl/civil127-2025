@@ -45,9 +45,9 @@ jobs:
       - name: Upload solutions zip as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: solutions-${{ steps.date.outputs.date }}
+          name: solutions-${{ steps.gitsha.outputs.gitsha }}-${{ steps.date.outputs.date }}
           # The name of the artifact that will appear in GitHub Actions
-          path: solutions-${{ steps.date.outputs.date }}.zip
+          path: solutions-${{ steps.gitsha.outputs.gitsha }}-${{ steps.date.outputs.date }}.zip
           # The file path of the zip file to upload
           retention-days: 30  # How long to keep the artifact
           # GitHub will automatically delete this artifact after 30 days
