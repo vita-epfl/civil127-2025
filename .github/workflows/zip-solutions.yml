@@ -3,6 +3,9 @@ name: Zip Solutions Folder
 
 on:
   push:
+    # only run on main branch
+    branches:
+      - main
     paths:
       - 'solutions/**'  # Trigger workflow when files in solutions folder are changed
   # This section defines when the workflow will run - specifically when changes are pushed to any file
