@@ -36,7 +36,7 @@ jobs:
         # The timestamp from the previous step is included in the filename to make it unique
         
       - name: Upload solutions zip as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: solutions-${{ steps.date.outputs.date }}
           # The name of the artifact that will appear in GitHub Actions
