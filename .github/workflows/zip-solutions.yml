@@ -1,53 +1,46 @@
+# Name of workflow that appears in the GitHub Actions tab in the web UI
 name: Zip Solutions Folder
-# This defines the name of the workflow that will appear in the GitHub Actions tab
 
+# Trigger workflow when main is pushed and solutions/ folder is modified.
+# ** means any file or subfolder.
 on:
   push:
-    # only run on main branch
     branches:
       - main
     paths:
-      - 'solutions/**'  # Trigger workflow when files in solutions folder are changed
-  # This section defines when the workflow will run - specifically when changes are pushed to any file
-  # within the 'solutions/' directory (the '**' means any file or subfolder within 'solutions/')
+      - 'solutions/**'
   
-  workflow_dispatch:    # Allow manual triggering of the workflow
-  # This allows you to manually trigger the workflow from the GitHub Actions tab
+  workflow_dispatch:    # Allow manual triggering of the workflow from the web UI
 
 jobs:
   zip-solutions:
-    # This defines a job named 'zip-solutions'
+    # Run on latest Ubuntu provided by GitHub, which includes zip.
     runs-on: ubuntu-latest
-    # The job will run on the latest Ubuntu virtual environment provided by GitHub
 
     steps:
+      # Checkout action to fetch the repo's code.
       - name: Checkout repository
         uses: actions/checkout@v4
-        # This step uses the checkout action to fetch your repository code
-        # Without this, the workflow wouldn't have access to your files
         
-      - name: Get current date
-        id: date
-        run: echo "date=$(date +'%Y-%m-%d-%H-%M')" >> $GITHUB_OUTPUT
-        # This creates a timestamp in YYYY-MM-DD-HH-MM format and saves it to an output variable
-        # The 'id: date' allows us to reference this step later using ${{ steps.date.outputs.date }}
+      # Fetch the current timestamp (in seconds since epoch) to make it easier
+      # to tell which archive is newer.
+      - name: Get current timestamp
+        id: timestamp
+        run: echo "timestamp=$(date +'%s')" >> $GITHUB_OUTPUT
       
-      # this will create a short string with the current git SHA
-      - name: Get Git SHA
+      # Create a short string with the current git SHA
+      - name: Get git SHA
         id: gitsha
         run: echo "gitsha=$(git rev-parse --short main)" >> $GITHUB_OUTPUT
 
+      # Zip the folder. Format will e.g. solutions-1742233117-47d6929.zip
       - name: Zip solutions folder
-        run: zip -r solutions-${{ steps.gitsha.outputs.gitsha }}-${{ steps.date.outputs.date }}.zip solutions/
-        # This runs the zip command to compress the solutions folder
-        # The timestamp from the previous step is included in the filename to make it unique
-        
+        run: zip -r solutions-${{ steps.timestamp.outpus.timestamp }}-${{ steps.gitsha.outputs.gitsha }}.zip solutions/
+
+      # Upload to GitHub's artifact store.
       - name: Upload solutions zip as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: solutions-${{ steps.gitsha.outputs.gitsha }}-${{ steps.date.outputs.date }}
-          # The name of the artifact that will appear in GitHub Actions
-          path: solutions-${{ steps.gitsha.outputs.gitsha }}-${{ steps.date.outputs.date }}.zip
-          # The file path of the zip file to upload
-          retention-days: 30  # How long to keep the artifact
-          # GitHub will automatically delete this artifact after 30 days
+          name: solutions-${{ steps.timestamp.outpus.timestamp }}-${{ steps.gitsha.outputs.gitsha }}
+          path: solutions-${{ steps.timestamp.outpus.timestamp }}-${{ steps.gitsha.outputs.gitsha }}.zip
+          retention-days: 90  # How long to keep the artifact (maximum for free repos)
