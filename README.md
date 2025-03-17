@@ -18,3 +18,9 @@ The script will load a game board from the `levels` folder (now placed in `solut
 One can open the `solutions` folder in VS Code and use the "Run and Debug" function.
 Alternatively, one can also adjust the path in the codes.
 Besides, the tests can be run from `solutions` folder using `python -m unittest exercise_n_n\test_file.py`.
+
+The `solutions` folder will be automatically zipped after each update, and one can find the solutions as a zip file as follows:
+
+1. Click on "Actions" tab at the top of this page. 
+2. On the left side bar under "Actions" category, click on "Zip Solutions Folder"
+3. Click on the latest run, and click the download button on the "Artifacts" section
