@@ -46,7 +46,7 @@ class SokobanController:
                         self.view.print(self.model)
                     elif move_response == MoveResponse.DONE:
                         self.view.print(self.model)
-                        self.view.winning_message()
+                        self.view.display_message("You Won!", (255, 215, 0), wait_time=3000)
                         return
                     else:
-                        print(move_response.value)
+                        self.view.display_message("Invalid Move", (139, 0, 0))
