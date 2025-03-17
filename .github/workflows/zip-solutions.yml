@@ -31,10 +31,14 @@ jobs:
         run: echo "date=$(date +'%Y-%m-%d-%H-%M')" >> $GITHUB_OUTPUT
         # This creates a timestamp in YYYY-MM-DD-HH-MM format and saves it to an output variable
         # The 'id: date' allows us to reference this step later using ${{ steps.date.outputs.date }}
-        
+      
+      # this will create a short string with the current git SHA
+      - name: Get Git SHA
+        id: gitsha
+        run: echo "gitsha=$(git rev-parse --short main)" >> $GITHUB_OUTPUT
+
       - name: Zip solutions folder
-        run: |
-          zip -r solutions-${{ steps.date.outputs.date }}.zip solutions/
+        run: zip -r solutions-${{ steps.gitsha.outputs.gitsha }}-${{ steps.date.outputs.date }}.zip solutions/
         # This runs the zip command to compress the solutions folder
         # The timestamp from the previous step is included in the filename to make it unique
         
