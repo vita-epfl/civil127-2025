@@ -2,12 +2,10 @@
 
 ## March 25, 2025
 
-Lab 5 and 6 are combined – you get 2 weeks to solve these exercises. You only need to turn in exercises 6.1 and 6.2, which will be graded and allow you to earn up to 1 bonus point towards your lab 4 grade.
+Lab 5 and 6 are combined – you get 2 weeks to solve these exercises. You only need to turn in exercise 6.2, which will be graded and allow you to earn up to 1 bonus point towards your lab 4 grade.
 
 Please make sure your files are organized as following, where \<SCIPER\> is your 6-digits SCIPER number:
 
-\<SCIPER\>/exercise\_6\_1/roman.py  
-\<SCIPER\>/exercise\_6\_1/test\_roman.py  
 \<SCIPER\>/exercise\_6\_2/README.md  
 \<SCIPER\>/exercise\_6\_2/sokoban.py  
 \<SCIPER\>/exercise\_6\_2/sokoban\_model.py  
@@ -38,7 +36,7 @@ You can check that your program works by checking the result for `range(1000, 10
 all different: 4536 (ratio: 0.504)  
 alternating: 3345 (ratio: 0.372)
 
-## Exercise 6.1
+## Exercise 6.1 (optional)
 
 Implement a program to convert to and from Roman numerals. Roman numerals use different symbols for each power of ten, and there is no zero symbol, in contrast with the place value notation of Arabic numerals (in which place-keeping zeros enable the same digit to represent different powers of ten).
 
