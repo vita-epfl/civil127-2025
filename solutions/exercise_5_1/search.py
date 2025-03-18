@@ -48,7 +48,7 @@ def _search(r, filter):
     for i in r:
         if filter(str(i)):
             n += 1
-    print(n, "ratio:", round(n/len(r), 3))
+    print(f"{n} (ratio: {round(n/len(r), 3)})")
 
 
 def search(r):
