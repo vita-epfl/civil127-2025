@@ -1,0 +1,46 @@
+# Name of workflow that appears in the GitHub Actions tab in the web UI
+name: Zip Solutions Folder
+
+# Trigger workflow when main is pushed and solutions/ folder is modified.
+# ** means any file or subfolder.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'solutions/**'
+  
+  workflow_dispatch:    # Allow manual triggering of the workflow from the web UI
+
+jobs:
+  zip-solutions:
+    # Run on latest Ubuntu provided by GitHub, which includes zip.
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout action to fetch the repo's code.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      # Fetch the current timestamp (in seconds since epoch) to make it easier
+      # to tell which archive is newer.
+      - name: Get current timestamp
+        id: timestamp
+        run: echo "timestamp=$(date +'%s')" >> $GITHUB_OUTPUT
+      
+      # Create a short string with the current git SHA
+      - name: Get git SHA
+        id: gitsha
+        run: echo "gitsha=$(git rev-parse --short main)" >> $GITHUB_OUTPUT
+
+      # Zip the folder. Format will e.g. solutions-1742233117-47d6929.zip
+      - name: Zip solutions folder
+        run: zip -r solutions-${{ steps.timestamp.outpus.timestamp }}-${{ steps.gitsha.outputs.gitsha }}.zip solutions/
+
+      # Upload to GitHub's artifact store.
+      - name: Upload solutions zip as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: solutions-${{ steps.timestamp.outpus.timestamp }}-${{ steps.gitsha.outputs.gitsha }}
+          path: solutions-${{ steps.timestamp.outpus.timestamp }}-${{ steps.gitsha.outputs.gitsha }}.zip
+          retention-days: 90  # How long to keep the artifact (maximum for free repos)
