@@ -14,3 +14,4 @@ class TestSearch(unittest.TestCase):
         self.assertTrue(alternating("638342"))
         self.assertFalse(alternating("842305"))
         self.assertFalse(alternating("285600"))
+        self.assertFalse(alternating("112062"))
