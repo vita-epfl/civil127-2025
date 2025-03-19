@@ -34,7 +34,7 @@ Write a program which can answer the following questions. Given a range, how man
 You can check that your program works by checking the result for `range(1000, 10000)`. You should get:  
 3 consecutive: 171 (ratio: 0.019)  
 all different: 4536 (ratio: 0.504)  
-alternating: 3345 (ratio: 0.372)
+alternating: 3105 (ratio: 0.345)
 
 ## Exercise 6.1 (optional)
 
